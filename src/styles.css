@@ -1,0 +1,118 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — Advocate R. Thirumoorthy
+ * Clean white + light gray, subtle dark-navy accent.
+ * Inter for everything; subtle serif accent for display headings.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --font-display: "Source Serif 4", "Source Serif Pro", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-navy-soft: var(--navy-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -8px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.05), 0 12px 32px -16px rgba(15, 23, 42, 0.12);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Classic navy #1E3A8A */
+  --navy: oklch(0.32 0.13 264);
+  --navy-foreground: oklch(0.99 0.003 250);
+  --navy-soft: oklch(0.96 0.018 255);
+
+  --background: oklch(1 0 0);                     /* pure white */
+  --foreground: oklch(0.22 0.03 264);             /* near-navy ink */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 264);
+  --primary: oklch(0.32 0.13 264);                /* navy */
+  --primary-foreground: oklch(0.99 0.003 250);
+  --secondary: oklch(0.975 0.005 250);            /* #F3F4F6 light gray */
+  --secondary-foreground: oklch(0.22 0.03 264);
+  --muted: oklch(0.965 0.006 250);
+  --muted-foreground: oklch(0.48 0.02 257);
+  --accent: oklch(0.32 0.13 264);
+  --accent-foreground: oklch(0.99 0.003 250);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0.003 250);
+  --border: oklch(0.92 0.008 255);                /* #E5E7EB */
+  --input: oklch(0.92 0.008 255);
+  --ring: oklch(0.32 0.13 264);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+    font-weight: 600;
+  }
+}
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) { padding-inline: 2rem; }
+  @media (min-width: 1280px) { padding-inline: 3rem; }
+}
+
+@utility navy-rule {
+  display: inline-block;
+  width: 3rem;
+  height: 2px;
+  background: var(--navy);
+}
+
+@utility section-pad {
+  padding-block: 4.5rem;
+  @media (min-width: 768px) { padding-block: 6rem; }
+}
+
+@utility hairline {
+  border-color: var(--border);
+}
