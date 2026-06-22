@@ -9,7 +9,7 @@ export const Route = createFileRoute("/practice-areas")({
   head: () => ({
     meta: [
       { title: "Practice Areas — Advocate R. Thirumoorthy" },
-      { name: "description", content: "Writ petitions, PIL, constitutional matters, human rights, labour disputes, service matters, RTI, compensation, civil and criminal litigation." },
+      { name: "description", content: "Writ petitions, PIL, constitutional matters,civil, criminal litigation human rights, labour disputes, service matters, RTI and compensation." },
       { property: "og:title", content: "Practice Areas — Advocate R. Thirumoorthy" },
       { property: "og:description", content: "Comprehensive legal practice before the Madras High Court." },
       { property: "og:url", content: "/practice-areas" },
@@ -24,13 +24,13 @@ const areas = [
   { icon: Landmark, t: "Public Interest Litigation (PIL)", d: "PILs advancing governmental accountability, transparency and social justice." },
   { icon: Scale, t: "Constitutional Law Matters", d: "Fundamental rights, constitutional interpretation and challenges to statutory provisions." },
   { icon: Gavel, t: "Criminal Cases", d: "Quashing petitions, bail, anticipatory bail and criminal appeals." },
+  { icon: BookOpen, t: "Civil Litigation", d: "Civil suits, appeals and revisions across subordinate and high courts." },
   { icon: Shield, t: "Human Rights Litigation", d: "Representation in matters involving custodial violations, dignity and civil liberties." },
   { icon: Users, t: "Labour & Industrial Disputes", d: "Trade union matters, industrial disputes, retrenchment and wage claims." },
   { icon: Briefcase, t: "Service Matters", d: "Government service disputes, disciplinary proceedings and tribunal practice." },
   { icon: MapPin, t: "Land & Property Disputes", d: "Civil suits, acquisition challenges and property-related writs." },
   { icon: Info, t: "RTI Matters", d: "Right to Information proceedings, appeals and related writ petitions." },
   { icon: HandCoins, t: "Compensation Claims", d: "Statutory and constitutional compensation in human rights and accident cases." },
-  { icon: BookOpen, t: "Civil Litigation", d: "Civil suits, appeals and revisions across subordinate and high courts." },
 ];
 
 function PracticeAreas() {

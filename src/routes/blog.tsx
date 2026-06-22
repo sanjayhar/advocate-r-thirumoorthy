@@ -4,7 +4,7 @@ import { PageHeader } from "./about";
 import { ArrowRight, Clock, FileText } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-export const Route = createFileRoute("/articles")({
+export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
       { title: "Legal Insights — Advocate R. Thirumoorthy" },

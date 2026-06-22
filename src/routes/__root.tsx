@@ -107,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     {
       property: "og:description",
       content:
-        "15+ years of legal practice before the Madras High Court in Constitutional Law, Human Rights, Labour Rights, PILs, Criminal and Civil Litigation.",
+        "17+ years of legal practice before the Madras High Court in Constitutional Law, Criminal Law, Human Rights, Labour Rights, PILs and Civil Litigation.",
     },
 
     {
@@ -145,7 +145,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     {
       name: "twitter:description",
       content:
-        "Constitutional Law, Human Rights Litigation, PIL, Labour Disputes and Civil Matters.",
+        "Constitutional Law, Criminal Law, Human Rights Litigation, PIL, Labour Disputes and Civil Matters.",
     },
 
     {
@@ -188,7 +188,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         jobTitle: "Advocate",
 
         description:
-          "Advocate practicing before the Madras High Court with more than 15 years of experience in Constitutional Law, Human Rights Litigation, Public Interest Litigation, Labour Rights, Criminal and Civil Matters.",
+          "Advocate practicing before the Madras High Court with more than 17 years of experience in Constitutional Law, Criminal Law, Human Rights Litigation, Public Interest Litigation, Labour Rights and Civil Matters.",
 
         areaServed: {
           "@type": "State",
@@ -208,14 +208,49 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
         knowsAbout: [
           "Constitutional Law",
+          "Criminal Law",
           "Human Rights Litigation",
           "Public Interest Litigation",
           "Labour Law",
           "Civil Litigation",
-          "Criminal Law",
           "RTI Matters",
         ],
       }),
     },
   ],
 }),
+  shellComponent: RootShell,
+  component: RootComponent,
+  notFoundComponent: NotFoundComponent,
+  errorComponent: ErrorComponent,
+});
+
+function RootShell({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}
+
+function RootComponent() {
+  const { queryClient } = Route.useRouteContext();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </QueryClientProvider>
+  );
+}

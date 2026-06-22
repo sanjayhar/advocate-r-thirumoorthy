@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Advocate R. Thirumoorthy — Madras High Court" },
-      { name: "description", content: "Biography of Advocate R. Thirumoorthy — 15+ years of practice in constitutional law, human rights and labour rights before the Madras High Court." },
+      { name: "description", content: "Biography of Advocate R. Thirumoorthy — 17+ years of practice in constitutional law, Criminal Law, Human Rights and Labour Rights before the Madras High Court." },
       { property: "og:title", content: "About Advocate R. Thirumoorthy" },
-      { property: "og:description", content: "15+ years of practice before the Madras High Court." },
+      { property: "og:description", content: "17+ years of practice before the Madras High Court." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -19,11 +19,12 @@ export const Route = createFileRoute("/about")({
 
 const highlights = [
   "Regular appearance before the Madras High Court",
+  "criminal and civil litigation",
   "Writ petitions, writ appeals and PILs",
   "Constitutional and fundamental rights litigation",
   "Labour and industrial disputes representation",
   "Human rights and civil liberties matters",
-  "Service, criminal and civil litigation",
+  "Service",
 ];
 
 function PageHeader({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
@@ -46,7 +47,7 @@ function About() {
       <PageHeader
         eyebrow="About"
         title="About Advocate R. Thirumoorthy"
-        description="More than fifteen years at the Bar, representing individuals, activists, unions and public-interest causes before the Madras High Court."
+        description="More than seventeen years at the Bar, representing individuals, activists, unions and public-interest causes before the Madras High Court."
       />
 
       <section className="section-pad bg-white">
@@ -58,7 +59,7 @@ function About() {
             <h2 className="font-display text-2xl md:text-3xl text-foreground">Biography</h2>
             <span className="navy-rule" />
             <p>
-              Advocate R. Thirumoorthy is a practicing advocate with more than 15 years of experience before the Madras High Court and various subordinate courts and tribunals across Tamil Nadu.
+              Advocate R. Thirumoorthy is a practicing advocate with more than 17 years of experience before the Madras High Court and various subordinate courts and tribunals across Tamil Nadu.
             </p>
             <p>
               He has represented individuals, social activists, labour organisations, marginalised communities, and public-interest causes in constitutional, civil, criminal, labour and human rights matters.

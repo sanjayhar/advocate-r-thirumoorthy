@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHeader } from "./about";
 import { MapPin, Phone, Mail, MessageCircle, Building2, Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { sendConsultationEmail } from "@/lib/email";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -55,16 +56,34 @@ function Contact() {
       return;
     }
     setSubmitting(true);
+
     const { error } = await supabase.from("consultations").insert({
       ...parsed.data,
       status: "new",
     });
-    setSubmitting(false);
+
     if (error) {
+      setSubmitting(false);
       toast.error("Could not submit. Please try again or call the chamber.");
       return;
     }
+
+    try {
+      await sendConsultationEmail({
+        name: parsed.data.name,
+        phone: parsed.data.phone,
+        email: parsed.data.email,
+        caseType: parsed.data.case_type,
+        message: parsed.data.message,
+      });
+    } catch (emailError) {
+      console.error("EmailJS Error:", emailError);
+    }
+
+    setSubmitting(false);
+
     toast.success("Request received. The chamber will revert shortly.");
+
     form.reset();
   }
 

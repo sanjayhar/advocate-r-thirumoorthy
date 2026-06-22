@@ -23,10 +23,10 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "15+ years before the Madras High Court. Constitutional law, writ petitions, PIL, human rights and labour rights. Book a consultation with Advocate R. Thirumoorthy.",
+          "17+ years before the Madras High Court. Constitutional law, Criminal Law, writ petitions, PIL, human rights and labour rights. Book a consultation with Advocate R. Thirumoorthy.",
       },
       { property: "og:title", content: "Advocate R. Thirumoorthy — Madras High Court" },
-      { property: "og:description", content: "Constitutional, human rights and public interest litigation practice." },
+      { property: "og:description", content: "Constitutional, Criminal, human rights and public interest litigation practice." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { v: "15+", l: "Years at the Bar" },
+  { v: "17+", l: "Years at the Bar" },
   { v: "1000+", l: "Matters Handled" },
   { v: "High Court", l: "Madras Practice" },
   { v: "PIL", l: "Constitutional & Rights" },
@@ -43,6 +43,8 @@ const stats = [
 
 const focusAreas = [
   "Constitutional Law",
+  "Criminal Litigation",
+  "Civil Litigation",
   "Public Interest Litigation",
   "Human Rights",
   "Labour & Industrial Disputes",
@@ -51,11 +53,11 @@ const focusAreas = [
 
 const practiceTeasers = [
   { icon: Scale, t: "Constitutional Law", d: "Writ petitions and appeals before the Madras High Court." },
+  { icon: Gavel, t: "Civil & Criminal", d: "Civil litigation and criminal defence representation." },
   { icon: Shield, t: "Human Rights", d: "Representation in human rights and civil liberties matters." },
   { icon: Users, t: "Labour & Industrial", d: "Trade union, workers' rights and industrial disputes." },
   { icon: Landmark, t: "Public Interest", d: "PILs advancing accountability and social justice." },
   { icon: FileText, t: "Service Matters", d: "Government service and disciplinary proceedings." },
-  { icon: Gavel, t: "Civil & Criminal", d: "Civil litigation and criminal defence representation." },
 ];
 
 const commitments = [
@@ -68,11 +70,11 @@ const commitments = [
 ];
 
 const faqs = [
-  { q: "How can I schedule a consultation?", a: "Use the consultation form on the Contact page, or call/WhatsApp the chamber. Appointments are confirmed by the office." },
-  { q: "Do you handle writ petitions?", a: "Yes — writ petitions and writ appeals before the Madras High Court are a core area of practice." },
-  { q: "Do you appear before the Madras High Court?", a: "Yes. Practice is primarily before the Madras High Court at Chennai, including the Madurai Bench when required." },
-  { q: "Do you handle labour disputes?", a: "Yes — industrial disputes, trade union matters, workers' rights and related writ proceedings." },
-  { q: "Can consultations be conducted online?", a: "Yes. Online consultations are available by prior appointment for clients outside Chennai." },
+  { q: "What types of cases does Advocate R. Thirumoorthy handle?", a: "Advocate R. Thirumoorthy practices before the Madras High Court and other courts in Tamil Nadu, handling Constitutional Law matters, Criminal Cases, Civil Litigation, Writ Petitions, Public Interest Litigations (PIL), Human Rights Litigation, Labour Disputes, Service Matters, RTI-related cases, and Property Disputes." },
+  { q: "How can I book a legal consultation?", a: "You can book a consultation by submitting the contact form on the website, calling the office directly, or contacting the chamber through the provided contact details." },
+  { q: "What information should I provide when requesting a consultation?", a: "When requesting a consultation, it is helpful to provide your name, contact details, the nature of your legal issue, and a brief summary of the matter. Detailed documents can be shared later during the consultation process if required."},
+  { q: "Can I approach the advocate for a Writ Petition before the Madras High Court?", a: "Yes. The chamber regularly appears in Writ Petitions and Writ Appeals involving constitutional rights, administrative actions, service matters, labour disputes, and other public law issues before the Madras High Court." },
+  { q: "Does the advocate represent clients in criminal cases?", a: "Yes. Representation is available in criminal matters, including criminal original petitions, bail applications, criminal proceedings, and related litigation before competent courts." },
 ];
 
 function Home() {
@@ -90,7 +92,7 @@ function Home() {
               Advocate <span className="text-navy">R. Thirumoorthy</span>
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
-              15+ years of practice in constitutional law, public interest litigation, human rights, labour rights and social justice.
+              17+ years of practice in constitutional law, Criminal Law, Civil Law, litigation, human rights, labour rights and social justice.
             </p>
 
             <ul className="mt-6 flex flex-wrap gap-2">
@@ -161,7 +163,7 @@ function Home() {
             />
             <div className="mt-5 space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>
-                Advocate R. Thirumoorthy is a practicing advocate with more than 15 years of experience before the Madras High Court and various subordinate courts and tribunals across Tamil Nadu.
+                Advocate R. Thirumoorthy is a practicing advocate with more than  years of experience before the Madras High Court and various subordinate courts and tribunals across Tamil Nadu.
               </p>
               <p>
                 He has represented individuals, social activists, labour organisations, marginalised communities and public-interest causes in constitutional, civil, criminal, labour and human rights matters.
