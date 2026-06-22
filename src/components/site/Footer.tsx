@@ -13,7 +13,7 @@ export function Footer() {
             <span className="font-display text-lg">R. Thirumoorthy</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Advocate practicing before the Madras High Court — constitutional law, human rights, labour rights, and public interest litigation.
+            Advocate R. Thirumoorthy is a practicing advocate before the Madras High Court with experience in Constitutional Law, Civil Litigation, Criminal Matters, Human Rights Litigation, Public Interest Litigation (PIL), Labour & Industrial Disputes, Service Matters, and Land & Property Disputes.
           </p>
         </div>
 
@@ -25,6 +25,7 @@ export function Footer() {
             <li><Link to="/notable-cases" className="hover:text-navy">Notable Cases</Link></li>
             <li><Link to="/articles" className="hover:text-navy">Legal Insights</Link></li>
             <li><Link to="/contact" className="hover:text-navy">Contact</Link></li>
+            <li><Link to="/blog" className="hover:text-navy">Blog</Link></li>
           </ul>
         </div>
 
